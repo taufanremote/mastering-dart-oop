@@ -1,5 +1,5 @@
 void main() {
-  var person = Person('Taufan', 'Lampung'); // not changed
+  var person = Person('Taufan', 'Lampung');
 
   print(person.name);
   print(person.address);
@@ -10,8 +10,5 @@ class Person {
   String? address;
   final String country = 'Indonesia';
 
-  Person(String name, String address) {
-    name = name; // name from Person can't be accessed, because it's same with class field
-    address = address; // address from Person can't be accessed, because it's same with class field
-  }
+  Person(this.name, String this.address);
 }
