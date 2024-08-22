@@ -10,5 +10,5 @@ class Person {
   String? address;
   final String country = 'Indonesia';
 
-  Person(this.name, String this.address);
+  Person(this.name, this.address);
 }
