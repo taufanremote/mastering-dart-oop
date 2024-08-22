@@ -9,6 +9,7 @@ void main() {
   print(person1.country);
 
   person1.sayHello('Evita');
+  person1.sayGoodBye('Matheo');
 }
 
 class Person {
@@ -18,5 +19,11 @@ class Person {
 
   void sayHello(String paramName) {
     print('Hello $paramName, My Name is $name');
+  }
+}
+
+extension GoodByeOnPerson on Person {
+  void sayGoodBye(String paramName) {
+    print('Good Bye $paramName, from $name');
   }
 }
