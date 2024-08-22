@@ -11,6 +11,10 @@ void main() {
   var person2 = Person.withAddress('Jakarta');
   print(person2.name);
   print(person2.address);
+
+  var person3 = Person.fromJakarta();
+  print(person3.name);
+  print(person3.address);
 }
 
 class Person {
@@ -20,7 +24,9 @@ class Person {
 
   Person(this.name, this.address);
 
-  Person.withName(this.name);
+  Person.withName(String name) : this(name, "No address");
 
-  Person.withAddress(this.address);
+  Person.withAddress(String address) : this("No name", address);
+
+  Person.fromJakarta() : this.withAddress('Jakarta');
 }
