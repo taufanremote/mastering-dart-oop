@@ -8,7 +8,11 @@ class Car {
   }
 }
 
-class Avanza implements Car {
+abstract class HasBrand {
+  String getBrand();
+}
+
+class Avanza implements Car, HasBrand {
   @override
   String name = 'Avanza';
 
@@ -21,4 +25,7 @@ class Avanza implements Car {
   int getTier() {
     return 4;
   }
+
+  @override
+  String getBrand() => 'Toyota';
 }
