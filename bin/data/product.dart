@@ -5,6 +5,9 @@ void main() {
   product.name = 'Macbook Pro';
   product._quantity = 100;
   product._getQuantity();
+
+  print(product.toString());
+  print(product);
 }
 
 class Product {
@@ -14,5 +17,10 @@ class Product {
 
   int? _getQuantity() {
     return _quantity;
+  }
+
+  @override
+  String toString() {
+    return 'Product{id=$id, name=$name, quantity=$_quantity}';
   }
 }
