@@ -1,4 +1,6 @@
-mixin Playable {
+abstract class Multimedia {}
+
+mixin Playable on Multimedia {
   String? name;
 
   void play() {
@@ -6,7 +8,7 @@ mixin Playable {
   }
 }
 
-mixin Stoppable {
+mixin Stoppable on Multimedia {
   String? name;
 
   void stop() {
@@ -14,6 +16,6 @@ mixin Stoppable {
   }
 }
 
-class Video with Playable, Stoppable {}
+class Video extends Multimedia with Playable, Stoppable {}
 
-class Audio with Playable, Stoppable {}
+class Audio extends Multimedia with Playable, Stoppable {}
