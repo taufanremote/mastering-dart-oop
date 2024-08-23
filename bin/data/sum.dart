@@ -9,6 +9,9 @@ class Sum {
   }
 }
 
+typedef Total = Sum;
+typedef Jumlah = Sum;
+
 void main() {
   var sum = Sum(10, 20);
   print(sum()); // you can call sum() directly, not sum.call();
